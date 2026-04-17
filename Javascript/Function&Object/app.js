@@ -42,12 +42,24 @@ console.log(divide(10,2));//5
     sayHi(); //Hi!
 
 //arrow function with single parameters 
-let sqaure = x => x*x;
+let square = x => x*x;
 console.log(square(4));//16
 
 
  //arrow function with one parameters 
  const greetUser =(name) => {
-    console.log ('Hello, $ {name}!');
+    console.log (`Hello, ${name}!`);
  }
  greetUser("Alice");//Hello,Alice!
+
+ //  map on Array
+ // map creates a new array by applying a
+ //function to each element of the original array
+ let newarray=[1,2,3,4,5];
+ let squaredArray = newarray.
+ map((num)=> num*num);
+ console.log(squaredArray); //[1,4,9,16,25]
+
+ //filter on array 
+ // filter creates a new array by applying a
+ //function to each element of the original array
