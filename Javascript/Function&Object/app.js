@@ -50,4 +50,4 @@ console.log(square(4));//16
  const greetUser =(name) => {
     console.log ('Hello, $ {name}!');
  }
- greetUser("Alice");
+ greetUser("Alice");//Hello,Alice!
