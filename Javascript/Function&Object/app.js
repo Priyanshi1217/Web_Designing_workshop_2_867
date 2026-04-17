@@ -59,7 +59,3 @@ console.log(square(4));//16
  let squaredArray = newarray.
  map((num)=> num*num);
  console.log(squaredArray); //[1,4,9,16,25]
-
- //filter on array 
- // filter creates a new array by applying a
- //function to each element of the original array
