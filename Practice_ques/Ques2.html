@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Number Checker</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container{
+            background-color: darksalmon;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 10px 10px 10px grey;
+        }
+
+        input{
+            padding: 10px;
+            width: 200px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin-top: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: crimson;
+        }
+
+        #result{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Palindrome Number Checker</h2>
+
+        <input type="number" id="num" placeholder="Enter the number">
+
+        <br><br>
+
+        <button onclick="checkPalindrome()">Check</button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        function solve(...args){
+
+            let num = args[0];
+
+            let original = num;
+            let reverse = 0;
+
+            while(num > 0){
+
+                let digit = num % 10;
+
+                reverse = reverse * 10 + digit;
+
+                num = Math.floor(num / 10);
+            }
+
+            let result;
+
+            if(original == reverse){
+                result = "Palindrome Number";
+            }
+            else{
+                result = "Not a Palindrome Number";
+            }
+
+            return result;
+        }
+
+        function checkPalindrome(){
+
+            const number = Number(document.getElementById("num").value);
+
+            const answer = solve(number);
+
+            document.getElementById("result").innerHTML = answer;
+        }
+
+    </script>
+
+</body>
+</html>
